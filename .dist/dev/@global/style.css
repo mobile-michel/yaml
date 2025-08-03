@@ -1,0 +1,28 @@
+/* @global/style.css */
+html {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffeded;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+header, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items:  center;
+  padding: 1rem;
+}

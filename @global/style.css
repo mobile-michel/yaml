@@ -1,6 +1,6 @@
 html {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 *,
@@ -11,11 +11,13 @@ html {
 
 body {
     margin: 0;
-    font-family: system-ui, sans-serif;;
+    font-family: system-ui, sans-serif;
     background-color: #ffeded;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
