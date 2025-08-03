@@ -1,0 +1,6 @@
+[build]
+  command = "npx nue build -p"
+  publish = ".dist/prod"
+
+[build.environment]
+  NODE_VERSION = "22"
