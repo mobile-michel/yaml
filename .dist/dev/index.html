@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data types</title>
+<script src="/@nue/hotreload.js" type="module"></script>
+<link href="/@global/style.css" rel="stylesheet">
+<link href="/@nue/syntax.css" rel="stylesheet">
+<meta name="generator" content="Nue v1.0.0-RC.4 (nuejs.org)">
+<meta name="date.updated" content="2025-08-03T13:12:42.896Z">
+<meta name="description" content="[sequence] `[sequence]`">
+<meta property="og:title" content="Data types">
+<meta property="og:description" content="[sequence] `[sequence]`">
+<meta name="nue:components" content=" ">
+<meta name="nue:globals" content="@global">
+    
+  </head>
+
+  <body>
+    
+    <header>
+    <nav><a href="/">Home</a>
+<a href="/scalars.html">Scalars</a>
+<a href="/sequences.html">Sequences</a>
+<a href="/maps.html">Maps</a>
+<a href="/complex/">Complex Structures</a></nav>
+</header>
+    
+    <main>
+    
+
+    <article>
+      
+      <h1>Data types</h1>
+<ul><li><p>scalars: string, numbers, booleans</p></li>
+<li><p>sequences: list of values</p></li>
+<li><p>maps: key-value pairs</p></li></ul>
+<h2>Scalars example</h2>
+<ul><li><p>name: John Doe <code>{name}</code></p></li>
+<li><p>age: 30 <code>{age}</code></p></li>
+<li><p>employed: true <code>{employed}</code></p></li>
+<li><p>e-mail: john.doe@example.com <code>{email}</code></p></li></ul>
+<h2>Sequence example</h2>
+<p></p><div>
+    <p>List of hobbies:</p>
+    <ul>
+        <li>hiking</li>
+    </ul><ul>
+        <li>photography</li>
+    </ul><ul>
+        <li>cooking</li>
+    </ul>
+</div> <code>[sequence]</code><p></p>
+<p>sequence.html file:</p>
+<pre><code language="html"><i>&lt;</i><strong>div </strong><label>@name</label><i>=</i><em>&quot;sequence&quot;</em><i>&gt;</i>
+    <i>&lt;</i><strong>p</strong><i>&gt;</i>List of <b>hobbies</b><i>:</i><i>&lt;</i><i>/</i><strong>p</strong><i>&gt;</i>
+    <i>&lt;</i><strong>ul </strong><i>:</i><b>for</b><i>=</i><em>&quot;item in hobbies&quot;</em><i>&gt;</i>
+        <i>&lt;</i><strong>li</strong><i>&gt;</i><i>{</i>item<i>}</i><i>&lt;</i><i>/</i><strong>li</strong><i>&gt;</i>
+    <i>&lt;</i><i>/</i><strong>ul</strong><i>&gt;</i>
+<i>&lt;</i><i>/</i><strong>div</strong><i>&gt;</i></code></pre>
+<h2>Map example</h2>
+<ul><li><p>street: Main St. <code>{address.street}</code></p></li>
+<li><p>city: Anytown <code>{address.city}</code></p></li>
+<li><p>state: CA <code>{address.state}</code></p></li></ul>
+      
+    </article>
+
+    
+  </main>
+    
+    
+  </body>
+
+</html>

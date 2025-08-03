@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Complex data structures</title>
+<script src="/@nue/hotreload.js" type="module"></script>
+<link href="/@nue/syntax.css" rel="stylesheet">
+<meta name="generator" content="Nue v1.0.0-RC.4 (nuejs.org)">
+<meta name="date.updated" content="2025-08-03T09:21:06.620Z">
+<meta name="description" content="The sequence " peoples" contains two maps (two people).">
+<meta property="og:title" content="Complex data structures">
+<meta property="og:description" content="The sequence " peoples" contains two maps (two people).">
+<meta name="nue:components" content=" ">
+    
+  </head>
+
+  <body>
+    
+    <header>
+    <nav><a href="/">Home</a>
+<a href="/scalars.html">Scalars</a>
+<a href="/sequences.html">Sequences</a>
+<a href="/maps.html">Maps</a>
+<a href="/complex.html">Complex Structures</a></nav>
+</header>
+    
+    <main>
+    
+
+    <article>
+      
+      <h1>Complex data structures</h1>
+<h2>Nested maps</h2>
+<pre><code language="*"><b>user_profile</b><i>:</i>
+  <sup># Standard key-value pairs</sup>
+  <b>id</b><i>:</i> <em>12345</em>
+  <b>username</b><i>:</i> johndoe
+  <b>email</b><i>:</i> johndoe<i>@</i>example<i>.</i>com
+
+  <sup># &apos;address&apos; is a key whose value is another map</sup>
+  <b>address</b><i>:</i>
+    <b>street</b><i>:</i> <em>123</em> Main St
+    <b>city</b><i>:</i> Anytown
+    <b>state</b><i>:</i> <b>CA</b>
+    <b>zip_code</b><i>:</i> <em>&quot;90210&quot;</em>
+
+  <sup># &apos;preferences&apos; is another nested map</sup>
+  <b>preferences</b><i>:</i>
+    <b>theme</b><i>:</i> dark
+    <b>notifications</b><i>:</i>
+      <b>email</b><i>:</i> <strong>true</strong>
+      <b>sms</b><i>:</i> <strong>false</strong></code></pre>
+<h2>Sequences of maps</h2>
+<p>The sequence <q>peoples</q> contains two maps (two people).</p>
+<pre><code language="*"><b>peoples</b><i>:</i>
+  <i>-</i> <b>name</b><i>:</i> John Doe
+    <b>age</b><i>:</i> <em>30</em>
+    <b>address</b><i>:</i>
+      <b>street</b><i>:</i> <em>123</em> Main St<i>.</i>
+      <b>city</b><i>:</i> Anytown
+      <b>state</b><i>:</i> <b>CA</b>
+  <i>-</i> <b>name</b><i>:</i> Jane Doe
+    <b>age</b><i>:</i> <em>25</em>
+    <b>address</b><i>:</i>
+      <b>street</b><i>:</i> <em>456</em> Elm St<i>.</i>
+      <b>city</b><i>:</i> Anytown
+      <b>state</b><i>:</i> <b>CA</b></code></pre>
+<h2>Inheritance of maps</h2>
+<p>The maps <q>employee</q> &amp; <q>student</q> inherits from the map <q>default</q></p>
+<pre><code language="*"><b>people</b><i>:</i>
+  <i>&amp;</i><strong>default</strong>
+  <b>name</b><i>:</i> John Doe
+  <b>age</b><i>:</i> <em>30</em>
+  <b>address</b><i>:</i>
+    <b>street</b><i>:</i> <em>123</em> Main St<i>.</i>    
+    <b>city</b><i>:</i> Anytown
+    <b>state</b><i>:</i> <b>CA</b>
+
+  <b>employee</b><i>:</i>
+    <i>&lt;</i><i>&lt;</i><i>:</i> <i>*</i><strong>default</strong>
+    <b>position</b><i>:</i> Manager
+    <b>salary</b><i>:</i> <em>50000</em>
+
+  <b>student</b><i>:</i>
+    <i>&lt;</i><i>&lt;</i><i>:</i> <i>*</i><strong>default</strong>
+    <b>course</b><i>:</i> Computer science
+    <b>grade</b><i>:</i> A</code></pre>
+      
+    </article>
+
+    
+  </main>
+    
+    
+  </body>
+
+</html>

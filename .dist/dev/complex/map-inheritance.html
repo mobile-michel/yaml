@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Map inheritance</title>
+<script src="/@nue/hotreload.js" type="module"></script>
+<link href="/@global/style.css" rel="stylesheet">
+<link href="/@nue/syntax.css" rel="stylesheet">
+<meta name="generator" content="Nue v1.0.0-RC.4 (nuejs.org)">
+<meta name="date.updated" content="2025-08-03T13:12:37.148Z">
+<meta property="og:title" content="Map inheritance">
+<meta property="article:published_time" content="Fri Aug 01 2025 02:00:00 GMT+0200 (Central European Summer Time)">
+<meta name="nue:components" content=" ">
+<meta name="nue:globals" content="@global">
+    
+  </head>
+
+  <body>
+    
+    <header>
+    <nav><a href="/">Home</a>
+<a href="/scalars.html">Scalars</a>
+<a href="/sequences.html">Sequences</a>
+<a href="/maps.html">Maps</a>
+<a href="/complex/">Complex Structures</a></nav>
+</header>
+    
+    <main>
+    
+
+    <article>
+      
+      <h1>Map inheritance</h1>
+<pre><code language="*"><sup># 1. Define a base configuration template using an anchor (&amp;base_config)</sup>
+<b>base_config</b><i>:</i> <i>&amp;</i>base_config
+  <b>api_version</b><i>:</i> v1
+  <b>timeout</b><i>:</i> <em>5000</em>
+  <b>retries</b><i>:</i> <em>3</em>
+  <b>monitoring</b><i>:</i>
+    <b>enabled</b><i>:</i> <strong>true</strong>
+
+<sup># 2. Create a &apos;development&apos; configuration that inherits from the base</sup>
+<b>development_service</b><i>:</i>
+  <i>&lt;</i><i>&lt;</i><i>:</i> <i>*</i>base_config  <sup># Use alias (*) to inherit all keys from &amp;base_config</sup>
+  <sup># Override a key from the base</sup>
+  <b>timeout</b><i>:</i> <em>1000</em>
+  <sup># Add a new key specific to development</sup>
+  <b>debug_mode</b><i>:</i> <strong>true</strong>
+
+<sup># 3. Create a &apos;production&apos; configuration that also inherits from the base</sup>
+<b>production_service</b><i>:</i>
+  <i>&lt;</i><i>&lt;</i><i>:</i> <i>*</i>base_config  <sup># Inherit from the same base config</sup>
+  <sup># Override keys for production needs</sup>
+  <b>retries</b><i>:</i> <em>5</em>
+  <sup># Add a new key</sup>
+  <b>replicas</b><i>:</i> <em>10</em></code></pre>
+<h2>Development Service</h2>
+<ul><li><p>api_version: v1</p></li>
+<li><p>timeout: 1000</p></li>
+<li><p>retries: 3</p></li>
+<li><p>monitoring enabled: true</p></li>
+<li><p>debug_mode: true</p></li></ul>
+<h2>Production Service</h2>
+<ul><li><p>api_version: v1</p></li>
+<li><p>timeout: 5000</p></li>
+<li><p>retries: 5</p></li>
+<li><p>monitoring enabled: true</p></li>
+<li><p>replicas: 10</p></li></ul>
+      
+    </article>
+
+    
+  </main>
+    
+    
+  </body>
+
+</html>

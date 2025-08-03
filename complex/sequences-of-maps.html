@@ -1,0 +1,9 @@
+<div @name="sequence-of-maps">
+    <ul :for="item in employees">
+        <li>id: {item.id}<br>name: {item.name}<br>role: {item.role}<br>skills:
+            <ul :for="skill in item.skills">
+                <li>{skill}</li>
+            </ul>
+        </li>
+    </ul>
+</div>

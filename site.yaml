@@ -1,0 +1,109 @@
+# yaml-language-server: $schema=https://json.schemastore.org/nuejs-site.json
+
+globals: ["@global"]
+nav:
+  - Home: /
+  - Scalars: /scalars.html
+  - Sequences: /sequences.html
+  - Maps: /maps.html
+  - Complex Structures: /complex/
+content_collection: complex
+
+# DATA TYPES
+# - Scalars
+name: John Doe # string
+age: 30 # number
+employed: true # boolean
+email: john.doe@example.com
+
+# - Sequences (list of values)
+hobbies:
+  - hiking
+  - photography
+  - cooking
+
+# - Maps (key-value pairs)
+address:
+  street: Main St.
+  city: Anytown
+  state: CA
+
+###########################
+# MORE COMPLEX STRUCTURES #
+###########################
+
+# NESTED MAP
+# The top-level key is 'user_profile'
+user_profile:
+  # Standard key-value pairs
+  id: 12345
+  username: johndoe
+  email: johndoe@example.com
+
+  # 'address' is a key whose value is another map
+  address:
+    street: 123 Main St
+    city: Anytown
+    state: CA
+    zip_code: "90210"
+
+  # 'preferences' is another nested map
+  preferences:
+    theme: dark
+    notifications:
+      email: true
+      sms: false
+
+# SEQUENCE OF MAPS
+# The top-level key 'employees' holds a sequence (list)
+employees:
+  # First item in the sequence is a map
+  - id: 101
+    name: Alice
+    role: Developer
+    skills:
+      - Python
+      - Docker
+      - SQL
+
+  # Second item in the sequence is another map
+  - id: 102
+    name: Bob
+    role: Project Manager
+    skills:
+      - Agile
+      - JIRA
+      - Communication
+
+  # Third item
+  - id: 103
+    name: Charlie
+    role: Designer
+    skills:
+      - Figma
+      - UI/UX Principles
+
+# MAP INHERITANCE (anchors, aliases & merge)
+# 1. Define a base configuration template using an anchor (&base_config)
+base_config: &base_config
+  api_version: v1
+  timeout: 5000
+  retries: 3
+  monitoring:
+    enabled: true
+
+# 2. Create a 'development' configuration that inherits from the base
+development_service:
+  <<: *base_config  # Use alias (*) to inherit all keys from &base_config
+  # Override a key from the base
+  timeout: 1000
+  # Add a new key specific to development
+  debug_mode: true
+
+# 3. Create a 'production' configuration that also inherits from the base
+production_service:
+  <<: *base_config  # Inherit from the same base config
+  # Override keys for production needs
+  retries: 5
+  # Add a new key
+  replicas: 10

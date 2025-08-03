@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sequences of maps</title>
+<script src="/@nue/hotreload.js" type="module"></script>
+<link href="/@global/style.css" rel="stylesheet">
+<link href="/@nue/syntax.css" rel="stylesheet">
+<meta name="generator" content="Nue v1.0.0-RC.4 (nuejs.org)">
+<meta name="date.updated" content="2025-08-03T13:12:31.619Z">
+<meta property="og:title" content="Sequences of maps">
+<meta property="article:published_time" content="Sat Aug 02 2025 02:00:00 GMT+0200 (Central European Summer Time)">
+<meta name="nue:components" content=" ">
+<meta name="nue:globals" content="@global">
+    
+  </head>
+
+  <body>
+    
+    <header>
+    <nav><a href="/">Home</a>
+<a href="/scalars.html">Scalars</a>
+<a href="/sequences.html">Sequences</a>
+<a href="/maps.html">Maps</a>
+<a href="/complex/">Complex Structures</a></nav>
+</header>
+    
+    <main>
+    
+
+    <article>
+      
+      <h1>Sequences of maps</h1>
+<pre><code language="*"><sup># The top-level key &apos;employees&apos; holds a sequence (list)</sup>
+<b>employees</b><i>:</i>
+  <sup># First item in the sequence is a map</sup>
+  <i>-</i> <b>id</b><i>:</i> <em>101</em>
+    <b>name</b><i>:</i> Alice
+    <b>role</b><i>:</i> Developer
+    <b>skills</b><i>:</i>
+      <i>-</i> Python
+      <i>-</i> Docker
+      <i>-</i> <b>SQL</b>
+
+  <sup># Second item in the sequence is another map</sup>
+  <i>-</i> <b>id</b><i>:</i> <em>102</em>
+    <b>name</b><i>:</i> Bob
+    <b>role</b><i>:</i> Project Manager
+    <b>skills</b><i>:</i>
+      <i>-</i> Agile
+      <i>-</i> <b>JIRA</b>
+      <i>-</i> Communication
+
+  <sup># Third item</sup>
+  <i>-</i> <b>id</b><i>:</i> <em>103</em>
+    <b>name</b><i>:</i> Charlie
+    <b>role</b><i>:</i> Designer
+    <b>skills</b><i>:</i>
+      <i>-</i> Figma
+      <i>-</i> <b>UI</b><i>/</i><b>UX</b> Principles</code></pre>
+<div>
+    <ul>
+        <li>id: 101<br>name: Alice<br>role: Developer<br>skills:
+            <ul>
+                <li>Python</li>
+            </ul><ul>
+                <li>Docker</li>
+            </ul><ul>
+                <li>SQL</li>
+            </ul>
+        </li>
+    </ul><ul>
+        <li>id: 102<br>name: Bob<br>role: Project Manager<br>skills:
+            <ul>
+                <li>Agile</li>
+            </ul><ul>
+                <li>JIRA</li>
+            </ul><ul>
+                <li>Communication</li>
+            </ul>
+        </li>
+    </ul><ul>
+        <li>id: 103<br>name: Charlie<br>role: Designer<br>skills:
+            <ul>
+                <li>Figma</li>
+            </ul><ul>
+                <li>UI/UX Principles</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+      
+    </article>
+
+    
+  </main>
+    
+    
+  </body>
+
+</html>

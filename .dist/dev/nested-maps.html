@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nested maps</title>
+<script src="/@nue/hotreload.js" type="module"></script>
+<link href="/@nue/syntax.css" rel="stylesheet">
+<link href="/style.css" rel="stylesheet">
+<meta name="generator" content="Nue v1.0.0-RC.4 (nuejs.org)">
+<meta name="date.updated" content="2025-08-03T13:03:16.835Z">
+<meta property="og:title" content="Nested maps">
+<meta name="nue:components" content=" ">
+    
+  </head>
+
+  <body>
+    
+    <header>
+    <nav><a href="/">Home</a>
+<a href="/scalars.html">Scalars</a>
+<a href="/sequences.html">Sequences</a>
+<a href="/maps.html">Maps</a>
+<a href="/complex.html">Complex Structures</a>
+<a href="/nested-maps.html">Nested maps</a>
+<a href="/sequences-of-maps.html">Sequences of maps</a>
+<a href="/map-inheritance.html">Map inheritance</a></nav>
+</header>
+    
+    <main>
+    
+
+    <article>
+      
+      <h1>Nested maps</h1>
+<pre><code language="*"><b>user_profile</b><i>:</i>
+  <sup># Standard key-value pairs</sup>
+  <b>id</b><i>:</i> <em>12345</em>
+  <b>username</b><i>:</i> johndoe
+  <b>email</b><i>:</i> johndoe<i>@</i>example<i>.</i>com
+
+  <sup># &apos;address&apos; is a key whose value is another map</sup>
+  <b>address</b><i>:</i>
+    <b>street</b><i>:</i> <em>123</em> Main St
+    <b>city</b><i>:</i> Anytown
+    <b>state</b><i>:</i> <b>CA</b>
+    <b>zip_code</b><i>:</i> <em>&quot;90210&quot;</em>
+
+  <sup># &apos;preferences&apos; is another nested map</sup>
+  <b>preferences</b><i>:</i>
+    <b>theme</b><i>:</i> dark
+    <b>notifications</b><i>:</i>
+      <b>email</b><i>:</i> <strong>true</strong>
+      <b>sms</b><i>:</i> <strong>false</strong></code></pre>
+<ul><li><p>id: 12345</p></li>
+<li><p>username: johndoe</p></li>
+<li><p>email: johndoe@example.com</p></li>
+<li><p>street: 123 Main St</p></li>
+<li><p>city: Anytown</p></li>
+<li><p>state: CA</p></li>
+<li><p>zip_code: 90210</p></li>
+<li><p>theme: dark</p></li>
+<li><p>email notifications: true</p></li>
+<li><p>sms notifications:</p></li></ul>
+      
+    </article>
+
+    
+  </main>
+    
+    
+  </body>
+
+</html>
